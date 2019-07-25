@@ -1,0 +1,10 @@
+on idle
+	tell application "System Events"
+		if application process "Postman" exists then
+			set volume output volume 35
+			do shell script "open https://www.youtube.com/watch?v=425GpjTSlS4"
+			error "Wait a minute Mr. Postman"
+		end if
+		return 1 -- this number tells System at what intervals to execute
+	end tell
+end idle
